@@ -25,7 +25,7 @@ CREATE TABLE Matricula (
                            id INT PRIMARY KEY AUTO_INCREMENT,
                            id_estudiante INT,
                            id_curso INT,
-                           fecha_matricula DATE,
+                           fecha_matricula DATETIME DEFAULT CURRENT_TIMESTAMP,
                            estado VARCHAR(20) CHECK (estado IN ('Activa', 'Cancelada')),
                            FOREIGN KEY (id_estudiante) REFERENCES Estudiante(id),
                            FOREIGN KEY (id_curso) REFERENCES Curso(id)
@@ -64,3 +64,14 @@ CREATE TABLE Asistencia (
                             FOREIGN KEY (id_estudiante) REFERENCES Estudiante(id),
                             FOREIGN KEY (id_curso) REFERENCES Curso(id)
 );
+
+
+INSERT INTO Estudiante (id, nombre, apellido, email, telefono, ciclo_academico) VALUES
+                                                                                    (1, 'Juan', 'Pérez', 'juan.perez@upc.com', '1234567890', '2023-1'),
+                                                                                    (2, 'Ana', 'Gómez', 'ana.gomez@upc.com', '0987654321', '2023-2'),
+                                                                                    (3, 'Luis', 'Martínez', 'luis.martinez@upc.com', '1122334455', '2024-1');
+
+INSERT INTO Curso (nombre, creditos, ciclo_academico) VALUES
+                                                          ('Matemáticas', 4, '2023-1'),
+                                                          ('Programación', 3, '2023-2'),
+                                                          ('Bases de Datos', 3, '2024-1');

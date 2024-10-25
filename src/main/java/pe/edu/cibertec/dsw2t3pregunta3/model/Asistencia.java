@@ -27,7 +27,6 @@ public class Asistencia {
     @JoinColumn(name = "id_curso")
     private Curso curso;
 
-    @Temporal(TemporalType.DATE)
     private final LocalDateTime fecha = LocalDateTime.now();
     private String estado;
 }
