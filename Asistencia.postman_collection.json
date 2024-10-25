@@ -1,0 +1,28 @@
+{
+	"info": {
+		"_postman_id": "73402fca-28ce-438c-b065-6d0b3aeaef91",
+		"name": "Asistencia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33407555"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/v1/asistencia/registrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"estudiante\": {\r\n    \"id\": 2\r\n  },\r\n  \"curso\": {\r\n    \"id\": 2\r\n  },\r\n  \"estado\": \"Presente\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/api/v1/asistencia/registrar"
+			},
+			"response": []
+		}
+	]
+}
