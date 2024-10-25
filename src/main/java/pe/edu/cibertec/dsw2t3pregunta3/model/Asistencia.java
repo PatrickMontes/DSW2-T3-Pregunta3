@@ -1,10 +1,7 @@
 package pe.edu.cibertec.dsw2t3pregunta3.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -27,7 +24,8 @@ public class Asistencia {
     @JoinColumn(name = "id_curso")
     private Curso curso;
 
-    @Temporal(TemporalType.DATE)
-    private final LocalDateTime fecha = LocalDateTime.now();
     private String estado;
+
+    @Column(name = "fecha")
+    private final LocalDateTime fechaHora = LocalDateTime.now();
 }

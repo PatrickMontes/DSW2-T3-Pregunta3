@@ -23,8 +23,6 @@ public class Pago {
     @JoinColumn(name = "id_estudiante")
     private Estudiante estudiante;
 
-
-    @Temporal(TemporalType.DATE)
     @Column(name = "fecha_pago")
     private final LocalDateTime fechaPago = LocalDateTime.now();
     private Double monto;

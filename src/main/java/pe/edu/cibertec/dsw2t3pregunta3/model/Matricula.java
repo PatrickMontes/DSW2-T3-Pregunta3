@@ -27,7 +27,6 @@ public class Matricula {
     @JoinColumn(name = "id_curso")
     private Curso curso;
 
-    @Temporal(TemporalType.DATE)
     @Column(name = "fecha_matricula")
     private final LocalDateTime fechaMatricula = LocalDateTime.now();
     private String estado;
