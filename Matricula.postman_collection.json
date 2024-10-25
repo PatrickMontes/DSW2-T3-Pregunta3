@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "b5f62e3a-216c-43cf-99c1-2f1fb6fb804d",
+		"name": "Matricula",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34102124"
+	},
+	"item": [
+		{
+			"name": "RegistrarMatricula",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/matricula/matricular?estudianteId=1&cursoId=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"matricula",
+						"matricular"
+					],
+					"query": [
+						{
+							"key": "estudianteId",
+							"value": "1"
+						},
+						{
+							"key": "cursoId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CancelarMatricula",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/matricula/cancelar/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"matricula",
+						"cancelar",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
