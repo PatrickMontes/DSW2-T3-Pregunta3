@@ -2,7 +2,7 @@ CREATE DATABASE T3DSW;
 
 /*--PRIMER PROCESO--*/
 CREATE TABLE Estudiante (
-    id VARCHAR(10) PRIMARY KEY,
+    id INT(10) PRIMARY KEY,
     nombre VARCHAR(100),
     apellido VARCHAR(100),
     email VARCHAR(100),
